@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/student_name_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fatima Sohail"
+        android:textSize="14sp"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/idT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: "
+        android:textColor="@color/black1"
+        android:textSize="12sp"
+        android:layout_below="@id/student_name_list"/>
+
+    <TextView
+        android:id="@+id/student_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black1"
+        android:text="23"
+        android:layout_below="@id/student_name_list"
+        android:layout_toRightOf="@id/idT"/>
+
+    <CheckBox
+        android:id="@+id/checkB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:buttonTint="@color/purple_500"
+        android:checked="false"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E8E8E8"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/checkB"/>
+
+</RelativeLayout>

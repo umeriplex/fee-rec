@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StudentsActivity">
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/header_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Madarsa"
+            android:layout_toRightOf="@id/image_back"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/add_student_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:tint="@color/white1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_circle" />
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/ic_back"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/clear_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/clear"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@id/add_student_img"
+            app:tint="@color/white1" />
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/bin"
+            android:layout_toLeftOf="@id/clear_btn"
+            app:tint="@color/white1" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/student_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+    <TextView
+        android:id="@+id/no_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No student yet"
+        android:textColor="@color/black2"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
